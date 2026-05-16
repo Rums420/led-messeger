@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+JP+N&display=swap');
+
+body {
+    background-color: #151518;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+* {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+@keyframes shadow-pulse {
+    0% {
+        box-shadow: 0 0 12px 0px #419ff7;
+    }
+
+    50% {
+        box-shadow: 0 0 12px 3px #419ff7;
+    }
+
+    100% {
+        box-shadow: 0 0 12px 0px #419ff7;
+    }
+}
+
+/* ============ Стили для панели слево ============ */ 
+
+.menu_left {
+    display: flex;
+    position: fixed;
+    left: 20%;
+    flex-direction: column;
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+    border-radius: 15px;
+    animation: shadow-pulse 1s ease-in-out infinite;
+    transition: box-shadow 0.4s;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+}
+
+.menu_left button{
+    width: 180px;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center;
+    background-color: transparent;
+    color: #ffffffb4;
+    fill: #ffffffb4;
+    border-color: transparent;
+    border-radius: 25px;
+}
+
+.menu_left button:hover{
+    background-color: #6e6e6e3f;
+    animation: shadow-pulse 1s ease-in-out infinite;
+}
+
+#button_notif {
+    background-color: #6e6e6e7a;
+    fill: whitesmoke;
+    color: #f0f0f0;
+    background-color: #6e6e6e7a;
+}
+
+#button_log_out {
+    position: relative;
+    top: 500px;
+}
+
+b h2 {
+    color: #ffffff;
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.no_notif {
+    color: #ffffffb4;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .menu_left {
+        bottom: 2%;
+        left: auto;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        background: rgba(47, 47, 47, .5);
+        backdrop-filter: blur(16px);
+        border-radius: 32px;
+        width: 90%;
+    }
+
+    .logo{
+        display: none;
+    }
+    .menu_left button {
+        width: 80px;
+        height: 60px;
+        flex-direction: column;
+        gap: 5px;
+        position: relative;
+        left: 50%;
+        border-radius: 32px;
+    }
+    #text_notif{ font-size: 0; }
+
+    #text_notif::after {
+        font-size: 13px;
+        content: "Уведы";
+    }
+}

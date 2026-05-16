@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Добро пожаловать!</title>
+        <link rel="stylesheet" href="css/style_login.css">
+    </head>
+    <body>
+        <div class="main">
+            <img src="imges/logo.png" alt="Логотип" id="logo">
+            <h1><p class="hello"><b>Добро пожаловать</b></p></h1>
+            <p class="login_to_account">Войдите в свой аккаунт</p>
+            
+            <form id="login_form" method="post">
+                <div>
+                    <p class="text">Электронная почта</p>
+                    <div class="input-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#000000"><path d="m18.73 5.41-1.28 1L12 10.46 6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64z" fill="#000000"/></svg>
+                        <input type="email" name="email" placeholder="Введите электронную почту">
+                    </div>
+                </div>
+                
+                <div>
+                    <p class="text">Пароль</p>
+                    <div class="input-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#000000"><path d="M20 12c0-1.103-.897-2-2-2h-1V7c0-2.757-2.243-5-5-5S7 4.243 7 7v3H6c-1.103 0-2 .897-2 2v8c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-8zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v3H9V7z" fill="#000000"/></svg>
+                        <input type="password" name="pass" placeholder="Введите пароль">
+                    </div>
+                    
+                    <label class="text" id="rember-label">
+                        <input type="checkbox" id="rember-me" required>
+                        <span class="custom_check-box"></span>
+                        <span>Rember me</span>
+                    </label>
+                </div>
+                
+                <button id="login_button"  type="submit">Войти</button>
+            </form>
+            <p class="login-register">Нет аккаунта? <a href="/register">Зарегесрироваться</a></p>
+
+            <div class="error" id="error_div">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" height="24" class="error_logo"><path d="m13 13h-2v-6h2zm0 4h-2v-2h2zm-1-15c-1.3132 0-2.61358.25866-3.82683.7612-1.21326.50255-2.31565 1.23915-3.24424 2.16773-1.87536 1.87537-2.92893 4.41891-2.92893 7.07107 0 2.6522 1.05357 5.1957 2.92893 7.0711.92859.9286 2.03098 1.6651 3.24424 2.1677 1.21325.5025 2.51363.7612 3.82683.7612 2.6522 0 5.1957-1.0536 7.0711-2.9289 1.8753-1.8754 2.9289-4.4189 2.9289-7.0711 0-1.3132-.2587-2.61358-.7612-3.82683-.5026-1.21326-1.2391-2.31565-2.1677-3.24424-.9286-.92858-2.031-1.66518-3.2443-2.16773-1.2132-.50254-2.5136-.7612-3.8268-.7612z"></path></svg>
+                <span class="error_text" id="error_text">Тут будет ошибка ёу</span>
+                <div class="error_close"><svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" height="20"><path d="m15.8333 5.34166-1.175-1.175-4.6583 4.65834-4.65833-4.65834-1.175 1.175 4.65833 4.65834-4.65833 4.6583 1.175 1.175 4.65833-4.6583 4.6583 4.6583 1.175-1.175-4.6583-4.6583z"></path></svg>
+            </div>
+        </div>
+        <script type="module" src="js/login.js"></script>
+    </body>

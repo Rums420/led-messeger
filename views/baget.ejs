@@ -1,0 +1,28 @@
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет багет баг</title>
+        <style>
+            body{
+                background: url(../imges/baget.jpg) center;
+                background-attachment: fixed;
+                background-size: 1500px 1500px;
+                transition: background-size 0.5s ease-in-out;
+            }
+
+        </style>
+    </head>
+    <body>
+        <script>
+            let size = 1500;
+            let minus = 200;
+            
+            const interval = setInterval(() => {
+                size -= minus;
+                minus -= 5;
+                document.body.style.backgroundSize = `${size}px ${size}px`;
+            }, 2000);
+        </script>
+    </body>
+</html>

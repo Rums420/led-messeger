@@ -1,0 +1,600 @@
+@import url('https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+JP+N&display=swap');
+
+body:not(.menu_left) {
+    background-color: #151518;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+* {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+@keyframes shadow-pulse {
+    0% {
+        box-shadow: 0 0 12px 0px #419ff7;
+    }
+
+    50% {
+        box-shadow: 0 0 12px 3px #419ff7;
+    }
+
+    100% {
+        box-shadow: 0 0 12px 0px #419ff7;
+    }
+}
+
+/*============ Стили для публикации поста ============ */
+
+#publish_post {
+    display: flex;
+    max-width: none;
+    justify-content: center;
+    margin: 0 auto;
+    width: 600px;
+    height: 150px;
+    background-color: #222224;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+#publish_btn {
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    position: relative;
+    top: 80px;
+    right: 10px;
+    font-size: 18px;
+    border-color: transparent;
+}
+
+#publish_btn:hover:not(:disabled) {
+    opacity: 0.9;
+    animation: shadow-pulse 1s ease-in-out infinite;
+}
+.avatarka {
+    width: 40px;
+    height: 40px;
+    display: block;
+    font-size: 30px;
+    text-align: center;
+    border: #333 5px solid;
+    background-color: #333333;
+    border-radius: 50%;
+    position: relative;
+    top: 5px;
+    color: #fff;
+}
+
+#wat_new {
+    height: 78px;
+    width: 350px;           
+    max-width: none;       
+    position: relative;
+    top: 10px;
+    background-color: transparent;
+    border: transparent;
+    color: #fff;
+    font-size: 18px;
+    resize: none;
+}  
+
+#wat_new:focus {
+    outline: none;
+    border: #333333a1 2px solid;
+    border-radius: 8px;
+}
+
+/*============ Стили для кнопки прикрепления фото ============*/
+
+#attach_btn {
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    position: relative;
+    top: 100px;
+    right: 60%;
+}
+
+#attach_svg {
+    stroke: #ffffffb4;
+}
+
+#attach_btn:hover{
+    background-color: #6e6e6e;
+    animation: shadow-pulse 1s ease-in-out infinite;
+}
+
+#attach_btn:hover svg{
+    stroke: #fff;
+}
+
+#preview img{
+    width: auto;
+    height: 70px;
+    position: absolute;
+    padding-top: 10px;
+}
+
+/* Контейнер */
+
+.loading {
+  width: 70.4px;
+  height: 70.4px;
+  transform-style: preserve-3d;
+  animation: spinner 1.6s infinite ease;
+  position: absolute;
+  bottom: 50%;
+  right: auto;
+  left: auto;
+}
+
+/* Общие стили для всех шести граней */
+
+.loading > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(247, 197, 159, 0.1);
+  border: 3.5px solid rgb(247, 197, 159);
+}
+
+/* Грани куба */
+
+.loading div:nth-of-type(1) { /* задняя  */
+  transform: translateZ(-35.2px) rotateY(180deg);
+}
+
+.loading div:nth-of-type(2) { /* правая  */
+  transform: rotateY(-270deg) translateX(50%);
+  transform-origin: top right;
+}
+
+.loading div:nth-of-type(3) { /* левая   */
+  transform: rotateY(270deg) translateX(-50%);
+  transform-origin: center left;
+}
+
+.loading div:nth-of-type(4) { /* верхняя */
+  transform: rotateX(90deg) translateY(-50%);
+  transform-origin: top center;
+}
+
+.loading div:nth-of-type(5) { /* нижняя  */
+  transform: rotateX(-90deg) translateY(50%);
+  transform-origin: bottom center;
+}
+
+.loading div:nth-of-type(6) { /* передняя */
+  transform: translateZ(35.2px);
+}
+
+/* Анимация */
+
+@keyframes spinner {
+  0%   { transform: rotate(45deg) rotateX(-25deg)  rotateY(25deg);   }
+  50%  { transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);   }
+  100% { transform: rotate(45deg) rotateX(-385deg) rotateY(385deg); }
+}
+
+
+
+/*============ Стили для постов ============*/
+
+.post {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    background-color: #222224;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+#posts-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.post img {
+    width: calc(100% - 30px);
+    height: auto;
+    margin: 15px;
+    border-radius: 15px;
+}
+
+.post .username {
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.avatarka {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 43px;
+    height: 43px;
+    font-size: 25px;
+    background-color: #333333;
+    border-radius: 50%;
+    margin: 15px 10px 0 0px;
+    flex-shrink: 0;
+}
+
+#text {
+    font-size: 16px;
+    color: #fff;
+    padding: 15px 20px 0;
+    word-wrap: break-word;
+    white-space: normal;
+    margin-left: 5%;
+}
+
+
+.user_info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 15px 0 15px;
+    gap: 10px;
+}
+
+/* ============ Стили для лайков ============ */
+
+.post-actions {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px 15px;
+    gap: 5px;
+}
+
+.like button {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.like svg {
+    fill: transparent;
+    stroke: #ffffffb4;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.like .count {
+    color: #ffffffb4;
+    display: inline-block;
+    min-width: 40px;
+    text-align: center;
+}
+
+.like svg:hover {
+    transform: scale(1.1);
+}
+
+/* ============ Стили для коментов ============ */
+
+.comment button {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.comment #comment_svg {
+    fill: transparent;
+    stroke: #ffffffb4;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.comment .count {
+    color: #ffffffb4;
+    display: inline-block;
+    min-width: 40px;
+    text-align: center;
+}
+
+.comment svg:hover {
+    transform: scale(1.1);
+}
+
+#comments_overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+#comments_panel {
+    display: none;
+    position: fixed;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    max-height: 70vh;
+    background: #222224;
+    border-radius: 20px 20px 0 0;
+    z-index: 21;
+    flex-direction: column;
+}
+
+#comments_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #333;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#comments_close {
+    background: transparent;
+    border: none;
+    color: #ffffffb4;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#comments_list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#comments_input_div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border-top: 1px solid #333;
+}
+
+#comments_avatar {
+    width: 35px;
+    height: 35px;
+    background: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+#comments_input {
+    flex: 1;
+    background: #333;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 14px;
+}
+
+#comments_input:focus {
+    outline: none;
+    border: 1px solid #419ff7;
+}
+
+#comments_send_btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    stroke: #ffffffb4;
+    display: flex;
+    align-items: center;
+}
+
+#comments_send_btn svg path {
+    stroke: #ffffffb4;
+}
+
+#comments_send_btn:hover:not(:disabled) svg path {
+    stroke: #fff;
+}
+
+.comment-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.comment-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.comment-avatar {
+    width: 35px;
+    height: 35px;
+    background: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.comment-autor {
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.comment-text {
+    color: #ffffffb4;
+    font-size: 14px;
+    padding-left: 45px;
+}
+
+/* ============ Стили для просмотров ============ */
+
+.views {
+    margin-left: auto;
+    position: static;
+}
+
+.views #count_views {
+    color: #ffffffb4;
+    display: inline-block;
+    min-width: 40px;
+    text-align: center;
+}
+
+/* ============ Стили для панели слево ============ */ 
+
+#add-post {
+    background-color: #474748;
+    width: 60px;
+    height: 60px;
+    color: #ffffffb4;
+    font-size: 30px;
+    border-color: transparent;
+    border-radius: 50%;
+    text-align: center;
+    position: fixed;
+    bottom: 15%;
+    right: 5%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#add-post:hover {
+    animation: shadow-pulse 1s ease-in-out infinite;
+}
+
+.menu_left {
+    display: flex;
+    position: fixed;
+    left: 20%;
+    flex-direction: column;
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+    border-radius: 15px;
+    animation: shadow-pulse 1s ease-in-out infinite;
+    transition: box-shadow 0.4s;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+}
+
+.menu_left button{
+    width: 180px;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center;
+    background-color: transparent;
+    color: #ffffffb4;
+    fill: #ffffffb4;
+    border-color: transparent;
+    border-radius: 25px;
+}
+
+.menu_left button:hover{
+    background-color: #6e6e6e3f;
+    animation: shadow-pulse 1s ease-in-out infinite;
+}
+
+#button_feed {
+    background-color: #6e6e6e7a;
+    fill: whitesmoke;
+    color: #f0f0f0;
+    background-color: #6e6e6e7a;
+}
+
+#button_log_out {
+    position: relative;
+    top: 500px;
+}
+
+@media (max-width: 768px) {
+    .menu_left {
+        bottom: 2%;
+        left: auto;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        background: rgba(47, 47, 47, .5);
+        backdrop-filter: blur(16px);
+        border-radius: 32px;
+        width: 90%;
+    }
+
+    .logo{
+        display: none;
+    }
+    .menu_left button {
+        width: 80px;
+        height: 60px;
+        flex-direction: column;
+        gap: 5px;
+        position: relative;
+        left: 50%;
+        border-radius: 32px;
+    }
+    #text_notif{ font-size: 0; }
+
+    #text_notif::after {
+        font-size: 13px;
+        content: "Уведы";
+    }
+
+    /* ============ Пост ============ */
+
+    #publish_post {
+        width: 100%;
+        height: 80%;
+        position: fixed;
+        bottom: 0;
+        z-index: 2;
+        display: none;
+        left: 0;
+        margin-bottom: 0;
+    }
+
+    #attach_btn {
+        right: 50%;
+    }
+
+    #add-post { display: flex; }
+
+    #post-container {
+        width: 100%;
+        height: auto;
+        top: 0;
+    }
+    .post{
+        width: 100%;
+    }
+    .user_info .username{
+        position: relative;
+    }
+    .views {
+        position: relative;
+        left: 100px;
+    }
+    #comments_panel {
+        width: 100%;
+        left: 0;
+        transform: none;
+    }
+}

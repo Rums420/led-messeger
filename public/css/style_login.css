@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+body {
+    background-color: #151518;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.main {
+    width: 100%;
+    max-width: 400px;
+    min-height: 600px;
+    background-color: #25252b;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    border-radius: 13px;
+}
+
+@keyframes shadow-pulse {
+    0% {
+        box-shadow: 0 0 12px 0px #419ff7;
+    }
+
+    50% {
+        box-shadow: 0 0 12px 3px #419ff7;
+    }
+
+    100% {
+        box-shadow: 0 0 12px 0px #419ff7;
+    }
+}
+
+img {
+    width: 120px;
+    border-radius: 15px;
+    box-shadow: 0 0 12px 5px #419ff7;
+    animation: shadow-pulse 1s ease-in-out infinite;
+    transition: box-shadow 0.4s;
+} 
+
+div {
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/*=========== Приветсвеные теста ===========*/
+
+.hello {
+    margin: 5px;
+    color: #fff;
+    font-size: 32px;
+}
+
+.login_to_account {
+    padding: auto;
+    color: #fff;
+    font-size: 14px;
+}
+
+.text {
+    color: #fff;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/*=========== Стили для кнопки ===========*/
+
+#login_button {
+    width: calc(100% - 40px);
+    height: 40px;
+    background: whitesmoke;
+    margin-top: 30px;
+    border-color: transparent;
+    border-radius: 10px;
+    text-align: center;
+    color: #000000;
+    font-weight: bold;
+    font-size: 24px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+#login_button:hover {
+    opacity: 0.9;
+    animation: shadow-pulse 1s ease-in-out infinite;
+}
+
+#login_button:active {
+    transform: scale(1.03);
+}
+
+/*=========== Стили для сылки на регистрацию ===========*/
+
+.login-register {
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+}
+
+.login-register a {
+   text-decoration: none;
+   font-weight: bold; 
+   color: #fff;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-shadow: 0 0 12px #419ff7;
+}
+
+/*=========== Стили для текста ошибки ===========*/
+
+
+.error {
+    display: flex;
+    height: 32px;
+    width: 300px;
+    padding: 12px;
+    align-items: center;
+    position: absolute;
+    background-color: #EF665B;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px -3px #000000;
+    fill: #fff;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    bottom: 18%;
+}
+.error_close {
+    margin-left: auto;
+    cursor: pointer;
+}
+.error_text {
+    color: #fff;
+    margin-left: 7px;
+    font-size: 12px;
+    min-height: 18px;
+    font-weight: 700;
+}
+
+
+/*=========== Стили для полей ввода ===========*/
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    left: -22px;
+}
+
+.input-wrapper svg {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+input {
+    padding-left: 40px;
+    width: 100%;
+    width: 100%;
+    height: 40px;
+    border: #2D2D30 solid 2px;
+    border-radius: 13px;
+    background-color: #1b1b1f;
+    color: #fff;
+    font-size: 14px;
+}
+
+input::placeholder {
+    color: #fff;
+    opacity: 0.4;
+}
+
+input:focus{
+    outline: none;
+    animation: shadow-pulse 1s ease-in-out infinite;
+    transition: box-shadow 0.4s;
+}
+
+/*=========== REMBER ME ===========*/
+
+#rember-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    user-select: none;
+    color: #fff;
+    position: relative;
+    top: 15px;
+}
+
+#rember-me {
+    width: 20px; 
+    height: 20px; 
+    display: none;
+}
+
+#rember-me:hover + .custom_check-box {
+    border-color: rgb(65, 159, 247);
+    box-shadow: 0 0 12px 3px rgba(65, 159, 247, 0.3);
+    transform: scale(1.1);
+}
+
+#rember-me:checked + .custom_check-box {
+    background-color: rgb(0, 129, 250);
+    border-color: rgb(65, 159, 247);
+    transform: rotate(360deg);
+}
+
+.custom_check-box {
+    width: 25px;
+    height: 25px;
+    border-radius: 6px;
+    background: transparent;
+    transition: all 0.2s ease;
+    border: 2px solid rgba(65, 159, 247, 0.7);
+    box-shadow: 0 0 0 1px rgba(65, 159, 247, 0.3);
+    cursor: pointer;
+}
+
+/*=========== media ===========*/
+@media (max-width: 480px) {
+    .main {
+        padding: 15px;
+        border-width: 3px;
+    }
+    
+    .hello {
+        font-size: 24px;
+    }
+    
+    img {
+        width: 100px;
+    }
+    
+    #login_button {
+        font-size: 20px;
+    }
+    
+    .login-register {
+        font-size: 14px;
+    }
+}
+
+@media (max-height: 700px) {
+    .main {
+        min-height: auto;
+        padding: 15px;
+    }
+    
+    #login_button {
+        margin-top: 20px;
+    }
+    .error {
+        bottom: 1%;
+        left: 30px;
+    }
+}

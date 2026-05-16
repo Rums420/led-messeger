@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap');
+
+/**======== Главные стили =========*/
+
+* {
+    box-sizing: border-box;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+body {
+    background-color: #151518;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.main {
+    width: 100%;
+    max-width: 400px;
+    min-height: auto;
+    background-color: #25252b;
+    text-align: center;
+    padding: 20px;
+    border-radius: 13px;
+} 
+
+@keyframes shadow-pulse {
+    0% {
+        box-shadow: 0 0 12px 0px #419ff7;
+    }
+
+    50% {
+        box-shadow: 0 0 12px 3px #419ff7;
+    }
+
+    100% {
+        box-shadow: 0 0 12px 0px #419ff7;
+    }
+}
+
+img {
+    width: 120px;
+    border-radius: 15px;
+    box-shadow: 0 0 12px 5px #419ff7;
+    animation: shadow-pulse 1s ease-in-out infinite;
+    transition: box-shadow 0.4s;
+} 
+
+.register {
+    margin: 5px;
+    color: #fff;
+    font-size: 32px;
+}
+
+.register_to_account {
+    padding: auto;
+    color: #fff;
+    font-size: 14px;
+}
+
+div {
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.text {
+    color: #fff;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/*======== Стили для инпутов =========*/
+
+input {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 2px;
+    border: #2D2D30 solid 2px;
+    border-radius: 13px;
+    background-color: #1b1b1f;
+    color: #fff;
+    font-size: 14px;
+}
+
+input::placeholder {
+    color: #fff;
+    opacity: 0.4;
+}
+
+input:focus{
+    outline: none;
+    box-shadow: 0 0 12px #419ff7;
+    animation: shadow-pulse 1s ease-in-out infinite;
+    transition: box-shadow 0.4s;
+}
+
+/**//*======== Стили для кнопки =========*/
+
+#register_button {
+    width: calc(100% - 40px);
+    height: 40px;
+    background: whitesmoke;
+    margin-top: 30px;
+    border-color: transparent;
+    border-radius: 10px;
+    text-align: center;
+    color: #000000;
+    font-weight: bold;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#register_button:hover {
+    animation: shadow-pulse 1s ease-in-out infinite;
+    transition: box-shadow 0.4s;
+}
+#register_button:active {
+    transform: scale(1.03);
+}
+
+/*  ======== Стиль для текста ошибок =========*/
+
+.error {
+    display: flex;
+    height: 32px;
+    width: 300px;
+    padding: 12px;
+    align-items: center;
+    position: absolute;
+    background-color: #EF665B;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px -3px #000000;
+    fill: #fff;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    bottom: 5%;
+}
+.error_close {
+    margin-left: auto;
+    cursor: pointer;
+}
+.error_text {
+    color: #fff;
+    margin-left: 7px;
+    font-size: 12px;
+    min-height: 18px;
+    font-weight: 700;
+}
+
+
+/*======== Стили для div с инпутами =========*/
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    left: -22px;
+}
+
+.input-wrapper svg {
+    position: absolute;
+    left: 85%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+.input-wrapper input {
+    padding-left: 20px;
+    width: 100%;
+}
+
+.name_input{
+    position: relative;
+    bottom: 10px;
+}
+
+/*======== Стили для username и emoji=========*/
+
+#username_emoji{
+    position: relative;
+    left: 45%;
+    width: 45%;
+}
+
+#username_emoji svg {
+    position: absolute;
+    left: 75%;
+}
+
+#username_text{
+    position: relative;
+    left: 50%;
+    width: 50%;
+}
+
+#avatar-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #1b1b1f;
+    position: absolute;
+    right: 210px;
+    bottom: -1px;
+    border: #2D2D30 dashed 2px;
+    border-radius: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777777;
+    font-size: 50px;
+}
+
+#avatar {
+    color: #777777;
+    font-size: 50px;
+}
+
+#avatar-circle:hover {
+    animation: shadow-pulse 1s ease-in-out infinite;
+}
+
+#picker-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 100;
+}
+
+/*========= Стили для проверки на бота =========*/
+
+#rember-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    user-select: none;
+    color: #fff;
+}
+
+#rember-me {
+    width: 20px; 
+    height: 20px; 
+    display: none;
+}
+
+#rember-me:hover + .custom_check-box {
+    border-color: rgb(65, 159, 247);
+    box-shadow: 0 0 12px 3px rgba(65, 159, 247, 0.3);
+    transform: scale(1.1);
+}
+
+#rember-me:checked + .custom_check-box {
+    background-color: rgb(0, 129, 250);
+    border-color: rgb(65, 159, 247);
+    transform: rotate(360deg);
+}
+
+.custom_check-box {
+    width: 25px;
+    height: 25px;
+    border-radius: 6px;
+    background: transparent;
+    transition: all 0.2s ease;
+    border: 2px solid rgba(65, 159, 247, 0.7);
+    box-shadow: 0 0 0 1px rgba(65, 159, 247, 0.3);
+    cursor: pointer;
+}
+
+/*========= Для телефонов =========*/
+@media (max-width: 480px) {
+    .main {
+        padding: 15px;
+        border-width: 3px;
+    }
+    
+    .register {
+        font-size: 24px;
+    }
+    
+    img {
+        width: 100px;
+    }
+    
+    #register_button {
+        font-size: 20px;
+    }
+
+    #emoji {
+        right: 122%;
+    }
+
+    #username_emoji svg {
+    left: 75%;
+    }
+
+    .error {
+        bottom: 0.1%;
+        right: 15px;
+    }
+}

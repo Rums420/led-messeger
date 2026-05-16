@@ -1,0 +1,92 @@
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Рекомендации</title>
+        <link rel="stylesheet" href="/css/style_feed.css">
+    </head>
+    <body>
+
+        <!--========= Посты ========= -->
+        <div style="width: 100%;">
+            <div id="publish_post">
+                <span id="avatarka" class="avatarka">😀</span>
+                <textarea placeholder="Что нового?" id="wat_new" maxlength="70"></textarea>
+
+                <div id="preview"></div>
+                <button type="button" title="Добавить изобрадение" id="attach_btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" id="attach_svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.833" d="m17.867 9.208-7.659 7.659a5.003 5.003 0 1 1-7.075-7.075l7.659-7.659a3.335 3.335 0 1 1 4.716 4.717l-7.666 7.658a1.667 1.667 0 1 1-2.359-2.358l7.075-7.067"></path></svg>
+                </button>
+                    
+                <button type="submit" id="publish_btn">Опубликовать</button>
+            </div>
+            
+            <div id="posts-container">
+                
+            </div>
+        </div>
+
+        <div class="loading" id="loading">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!-- Меню слево -->
+
+        <button type="button" id="add-post">+</button>
+
+        <div class="menu_left">
+            <img src="/imges/logo.png" alt="Логотип" class="logo">
+
+            <div>
+                <button type="button" id="button_feed">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" id="svg_feed" height="24" ><path  fill-rule="evenodd" d="M20.689 10.968a2.806 2.806 0 0 0-2.244-1.108H5.555c-.887 0-1.705.404-2.244 1.107a2.808 2.808 0 0 0-.485 2.455l1.65 6.112a2.83 2.83 0 0 0 2.729 2.09h9.589a2.832 2.832 0 0 0 2.729-2.09l1.65-6.111a2.804 2.804 0 0 0-.484-2.455ZM8.436 3.875h7.125a.75.75 0 0 0 0-1.5H8.436a.75.75 0 0 0 0 1.5ZM5.682 7.253h12.634a.75.75 0 0 0 0-1.5H5.682a.75.75 0 0 0 0 1.5Z" clip-rule="evenodd"></path></svg>
+                    <b id="text_feed">Лента</b>
+                </button>
+            </div>
+
+            <div>
+                <button type="button" id="button_notif">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" id="svg_notif" height="24" fill="none" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M19.742 13.807c-.86-1.832-.837-2.52-.798-3.773.01-.296.02-.617.02-.986C18.964 6.122 16.804 2 12 2 7.197 2 5.036 6.122 5.036 9.048c0 .368.01.69.02.986.04 1.252.062 1.941-.807 3.797-.372.928-.327 1.73.135 2.382C5.492 17.783 8.7 18 12 18s6.508-.216 7.616-1.787c.463-.653.508-1.454.125-2.406Zm-4.686 5.198c-1.848.193-3.852.192-6.13-.002a.873.873 0 0 0-.835.437.763.763 0 0 0 .125.893C9.236 21.407 10.578 22 11.994 22h.002c1.42 0 2.765-.592 3.788-1.667a.765.765 0 0 0 .122-.9c-.162-.294-.495-.458-.85-.428Z" clip-rule="evenodd"></path></svg>
+                    <b id="text_notif">Уведомления</b>
+                </button>
+            </div>
+
+            <div>
+                <button type="button" id="button_profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" id="svg_profile" height="24" fill="none" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M11.998 11a3.996 3.996 0 0 0 4-4c.084-2.213-1.702-4-4-4A3.995 3.995 0 0 0 8 7c0 2.213 1.787 4 3.998 4Zm6.94 6.878c-.3-1.04-.9-1.986-2.097-2.743C15.843 14.473 14.246 14 12.05 14c-4.292 0-6.39 1.892-6.987 3.878-.2.568.1 1.136.598 1.42C7.458 20.431 9.654 21 12.05 21c2.296 0 4.492-.662 6.288-1.703.5-.284.8-.851.6-1.419Z" clip-rule="evenodd"></path></svg>
+                    <b id="text_profile">Профиль</b>
+                </button>
+            </div>
+
+            <div>
+                <button type="button" id="button_log_out">
+                    <svg width="20" height="20" viewBox="0 0 24 24"  fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16 17L21 12L16 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M21 12H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    <b id="text_log_out">Выход</b>
+                </button>
+            </div>
+        </div>
+
+        <!-- Панель комментариев -->
+        <div id="comments_overlay"></div>
+        <div id="comments_panel">
+            <div id="comments_header">
+                <span>Комментарии</span>
+                <button id="comments_close">✕</button>
+            </div>
+            <div id="comments_list"></div>
+            <div id="comments_input_div">
+                <span id="comments_avatar"></span>
+                <input type="text" id="comments_input" placeholder="Напишите комментарий" maxlength="100">
+                <button id="comments_send_btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <script type="module" src="js/feed.js"></script>
+    </body>
+</html>
