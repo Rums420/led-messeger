@@ -532,17 +532,11 @@ body:not(.menu_left) {
         left: 2%;
     }
 
-    .menu_left button b {
-        display: none;
-    }
-
     .menu_left button {
-        width: 60px;
-        height: 60px;
-        justify-content: center;
-        border-radius: 50%;
-        padding: 0;
-        gap: 0;
+        width: 150px; /* шире чтобы влез текст */
+        justify-content: flex-start;
+        border-radius: 25px;
+        padding: 0 15px;
     }
 
     .logo {
