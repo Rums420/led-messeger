@@ -205,7 +205,7 @@ input:focus{
     height: 80px;
     background-color: #1b1b1f;
     position: absolute;
-    right: 210px;
+    right: 110%;
     bottom: -1px;
     border: #2D2D30 dashed 2px;
     border-radius: 100%;
