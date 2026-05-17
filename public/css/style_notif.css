@@ -116,6 +116,11 @@ b h2 {
         border-radius: 25px;
         padding: 0 15px;
     }
+    .menu_left button svg {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+    }
 
     .logo {
         height: 60px;
