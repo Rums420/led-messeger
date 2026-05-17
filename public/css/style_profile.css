@@ -583,6 +583,53 @@ body {
     padding-top: 10px;
 }
 
+@media (max-width: 1200px) and (min-width: 769px) {
+    .menu_left {
+        left: 2%;
+    }
+
+    .menu_left button b {
+        display: none;
+    }
+
+    .menu_left button {
+        width: 60px;
+        height: 60px;
+        justify-content: center;
+        border-radius: 50%;
+        padding: 0;
+        gap: 0;
+    }
+
+    .logo {
+        height: 60px;
+        width: 60px;
+        margin-bottom: 30px;
+    }
+
+    #button_log_out {
+        top: 300px;
+    }
+
+    .avatar-div {
+        left: 25%;
+    }
+
+    .info {
+        width: 100%;
+        left: 20px;
+    }
+
+    .post {
+        width: 100%;
+        max-width: 550px;
+    }
+
+    #publish_post {
+        width: 550px;
+    }
+}
+
 /* ============ МОБИЛЬНЫЙ (до 768px) ============ */
 
 @media (max-width: 768px) {
