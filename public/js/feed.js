@@ -35,7 +35,7 @@ document.getElementById('button_profile').addEventListener('click', () => {
 
 // Лента
 document.getElementById('button_feed').addEventListener('click', () => {
-    window.location.href = '/feed';
+    window.location.href = '/';
 });
 
 // ====================== Лайк ======================

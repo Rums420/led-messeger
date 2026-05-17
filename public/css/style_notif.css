@@ -36,6 +36,15 @@ body {
     flex-direction: column;
 }
 
+#svg_notif {
+    fill: currentColor;
+    color: #ffffffb4;
+}
+
+#button_notif:hover #svg_notif {
+    color: whitesmoke;
+}
+
 .logo {
     height: 100px;
     width: 100px;
