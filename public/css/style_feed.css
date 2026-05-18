@@ -562,6 +562,9 @@ body:not(.menu_left) {
     #button_log_out {
         top: 300px;
     }
+    .post-div {
+        margin-left: 20%;
+    }
 }
 
 @media (max-width: 768px) {

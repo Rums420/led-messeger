@@ -621,7 +621,7 @@ body {
 
     .avatar-div {
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(+5%);
         top: 160px;
     }
 
@@ -635,6 +635,9 @@ body {
         flex-direction: column;
         align-items: center;
         gap: 0;
+    }
+    .main-content {
+        margin-left: 22%;
     }
 }
 
