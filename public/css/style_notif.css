@@ -85,24 +85,11 @@ body {
     position: relative;
     top: 500px;
 }
-
-b h2 {
-    color: #ffffff;
-    position: absolute;
-    top: 10%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.no_notif {
-    color: #ffffffb4;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    font-size: 20px;
-    transform: translate(-50%, -50%);
-    text-align: center;
+span {
+    color: #f0f0f0;
+    align-self: center;
+    font-weight: bold;
+    font-size: 25px;
 }
 
 @media (max-width: 1200px) and (min-width: 769px) {
