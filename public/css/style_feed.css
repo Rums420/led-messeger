@@ -565,6 +565,9 @@ body:not(.menu_left) {
     .post-div {
         margin-left: 20%;
     }
+    .post-div {
+        margin-left: 25%;
+    }
 }
 
 @media (max-width: 768px) {
