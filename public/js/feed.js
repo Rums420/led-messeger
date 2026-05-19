@@ -302,7 +302,7 @@ async function loadPosts() {
     }
 
     // Берём все ID постов и перемешиваем их рандомно
-    allPostIds = Object.keys(allData.posts).sort(() => Math.random() - 0.5);
+    allPostIds = Object.keys(allData).sort(() => Math.random() - 0.5);
 
     setupInfiniteScroll();
     showNextBatch();
