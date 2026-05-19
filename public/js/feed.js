@@ -293,7 +293,7 @@ function setupInfiniteScroll() {
 }
 
 async function loadPosts() {
-    const snapshot = await get(ref(database, '/'));
+    const snapshot = await get(ref(database, '/posts'));
     allData = snapshot.val();
 
     if (!allData.posts) {
