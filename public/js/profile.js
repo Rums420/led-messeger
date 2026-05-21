@@ -22,10 +22,11 @@ auth.onAuthStateChanged((user) => {
             document.getElementById('publish_post').style.display = 'none';
             document.getElementById('add-post').style.display = 'none';
             if (width <= 768) {
-                document.querySelector('.subscribe_button_mobile').style.display = 'flex';
-                document.querySelector('.subscribe_button').style.display = 'none';
+                document.getElementById('subscribe_button_mobile').style.display = 'flex';
+                document.getElementById('subscribe_button').style.display = 'none';
             } else {
-                document.querySelector('.subscribe_button').style.display = 'flex';
+                document.getElementById('subscribe_button').style.display = 'flex';
+                document.getElementById('subscribe_button_mobile').style.display = 'none';
                 document.querySelector('.info').style.marginBottom = '30%';
             }
         }
