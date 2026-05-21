@@ -799,9 +799,9 @@ body {
         height: auto;
         top: 0;
     }
-    .subscribe_button { display: none; }
+    .subscribe_button { display: none !important; }
     .subscribe_button_mobile {
-        display: block;
+        display: block ;
         height: 35px !important;
         width: 165px !important;
         position: static !important;
