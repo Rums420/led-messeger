@@ -392,7 +392,6 @@ body {
 /* ============ Стили для кнопки подписаться ============ */
 
 #subscribe_button {
-    display: flex   ;
     height: 45px;
     width: 170px;
     position: relative;
